@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class QuestionnaireResponseBot
 {
@@ -217,5 +218,78 @@ public class QuestionnaireResponseBot
 
         string AnswerTwenty = AnswerTwentyList[QRBObject.RandomNumberMethod(AnswerTwentyList.Count)];
         Console.WriteLine("Answer 20 : {0}\n", AnswerTwenty);
+
+        //Section 05
+        //Question 21
+        Console.WriteLine("Question 21: How would you describe your experience with learning English so far?");
+        List<string> AnswerTwentyOneList = new List<string>()
+        {
+            "Unpleasant", "Pleasant", "Frustrating", "Fulfilling", "Complex-simple"
+        };
+
+        string AnswerTwentyOne = AnswerTwentyOneList[QRBObject.RandomNumberMethod(AnswerTwentyOneList.Count)];
+        Console.WriteLine("Answer 21 : {0}\n", AnswerTwentyOne);
+
+        //Section 06
+        //Question 22
+        Console.WriteLine("Question 22: What is the main reason you decide to learn English?");
+        List<string> AnswerTwentyTwoList = new List<string>()
+        {
+            "Academic purposes", "Professional advancement", "Travel and tourism", "Personal interest"
+        };
+
+        string AnswerTwentyTwo = AnswerTwentyTwoList[QRBObject.RandomNumberMethod(AnswerTwentyTwoList.Count)];
+        Console.WriteLine("Answer 22 : {0}\n", AnswerTwentyTwo);
+
+        //Section 07
+        //Question 23
+        Console.WriteLine("Question 23: Do you find speaking English more challenging than writing it?");
+        List<string> AnswerTwentyThreeList = new List<string>()
+        {
+            "Yes", "No"
+        };
+
+        string AnswerTwentyThree = AnswerTwentyThreeList[QRBObject.RandomNumberMethod(AnswerTwentyThreeList.Count)];
+        Console.WriteLine("Answer 23 : {0}\n", AnswerTwentyThree);
+
+        //Question 24
+        Console.WriteLine("Question 24: Have you ever taken a formal English language classes?");
+        List<string> AnswerTwentyFourList = new List<string>()
+        {
+            "Yes", "No"
+        };
+
+        string AnswerTwentyFour = AnswerTwentyFourList[QRBObject.RandomNumberMethod(AnswerTwentyFourList.Count)];
+        Console.WriteLine("Answer 23 : {0}\n", AnswerTwentyFour);
+
+        //Section 08
+        //Question 25
+        Console.WriteLine("Question 25: Please rank the following language in order of difficulty, with 1 being the most difficult and 5 being least difficult");
+        //List<string> AnswerTwentyFiveList = new List<string>()
+        //{
+        //    "Grammar", "Pronunciation", "Listening comprehension", "Vocabulary", "Speaking fluency"
+        //};
+
+        //string AnswerTwentyFive = AnswerTwentyFiveList[QRBObject.RandomNumberMethod(AnswerTwentyFourList.Count)];
+
+        Random rand = new Random();
+        List<int> listOfInt = new List<int>() {1, 2, 3, 4, 5};
+        listOfInt = listOfInt.OrderBy(x=> rand.Next()).ToList();
+        foreach (int item in listOfInt)
+        {
+            Console.WriteLine("Answer 25 : {0}", item);
+        }
+        Console.Write("\n");
+
+        //Section 09
+        //Question 26
+        Console.WriteLine("Question 26: Which aspect of learning english would you priorities improving first?");
+        List<string> AnswerTwentySixList = new List<string>()
+        {
+            "Grammar", "Pronunciation", "Listening comprehension", "Vocabulary", "Speaking fluency"
+        };
+
+        string AnswerTwentySix = AnswerTwentySixList[QRBObject.RandomNumberMethod(AnswerTwentySixList.Count)];
+        Console.WriteLine("Answer 23 : {0}\n", AnswerTwentySix);
     }
 }
