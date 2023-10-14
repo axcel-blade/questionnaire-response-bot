@@ -8,7 +8,7 @@
             "name": "Launch",
             "type": "mono",
             "request": "launch",
-            "program": "${workspaceRoot}/program.exe",
+            "program": "${workspaceRoot}/QuestionnaireResponseBot.exe",
             "cwd": "${workspaceRoot}"
         },
         {
